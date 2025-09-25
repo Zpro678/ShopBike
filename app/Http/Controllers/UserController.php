@@ -7,7 +7,13 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    //
+    
+    public function error4041(Request $request)
+    {
+        $ip = $request->ip();
+        return view('user.404', compact('ip'));
+    }
+
     public function index() {
         return view('user.index');
     }

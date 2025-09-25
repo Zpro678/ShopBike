@@ -7,7 +7,7 @@
 			 <h1>4<label>0</label>4</h1>
 			 <span>ERROR</span>
 			 <h2>Ooops....!This page is not found.</h2>
-			 <a href="{{route('user.index')}}">Go Back</a>
+			 <a href="{{route('user.index')}}">Go Back {{ $ip }}</a>
 		 </div>
 	 </div>
 </div>

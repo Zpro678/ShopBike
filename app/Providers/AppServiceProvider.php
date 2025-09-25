@@ -24,5 +24,8 @@ class AppServiceProvider extends ServiceProvider
         Blade::directive('theme_user',function ($path){
             return "<?php echo asset('user/' . $path);?>";
         });
+        Blade::directive('theme_admin',function ($path){
+            return "<?php echo asset('admin/' . $path);?>";
+        });
     }
 }
