@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use Illuminate\Http\Request;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
@@ -21,4 +22,18 @@ Route::get('/cart', [UserController::class, 'cart'])->name('user.cart');
 Route::get('/single', [UserController::class, 'single'])->name('user.single');
 
 // Trang 404 (tùy bạn có muốn route không)
+
 Route::get('/404', [UserController::class, 'error404'])->name('user.404');
+
+Route::get('404', [UserController::class, 'error4041'])->name('user.404');
+
+
+Route::post('/', function (Request $request) {
+    $data = $request->only(['title', 'phone', 'email', 'content']);
+
+    // truy vấn insert dữ liệu vào bảng user
+    DB::table('user')->insert($data);
+    
+    return response()->json(['success' => true, 'data' => $data]); // trả JSON về client
+})->middleware('validate.user');
+

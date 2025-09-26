@@ -3,6 +3,7 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
+use App\Http\Middleware\ValidateUserData;
 
 //import các middleware
 use App\Http\Middleware\DemoMiddleWare;
@@ -15,6 +16,7 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware): void {
         //
+
         $middleware->append(\App\Http\Middleware\DemoMiddleWare::class); // đăng ký cho toàn bộ route
         /* xử lí auto đăng ký [code khá khó hiểu]
              $middlewarePath = app_path('Http/Middleware');
@@ -83,6 +85,11 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->alias($aliases);
     }
         */
+        $middleware->alias([
+            'validate.user' => ValidateUserData::class,
+        ]);
+
+
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         // 
