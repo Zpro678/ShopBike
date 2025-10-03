@@ -17,7 +17,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
  
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="csrf-token" content="{{ csrf_token() }}">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Bike-shop Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
@@ -51,7 +51,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             const form = event.target;
             const formData = new FormData(form);
 
-            const response = await fetch("{{ route('user.index') }}", {
+            const response = await fetch("{{ route('user.index.index') }}", {
                 method: "POST",
                 headers: {
                     "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').content

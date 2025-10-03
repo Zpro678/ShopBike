@@ -65,8 +65,8 @@
 							<a class="length" href="#">M</a>
 							<a class="length" href="#">S</a>
 							<div class="btn_form">
-								<a href="{{route('user.cart')}}">buy now</a>
-								<a href="{{route('user.cart')}}">ADD TO CART</a>
+								<a href="{{route('user.cart.cart')}}">buy now</a>
+								<a href="{{route('user.cart.cart')}}">ADD TO CART</a>
 							</div>
 							<div class="bike-type">
 							<p>TYPE  ::<a href="#">MOUNTAIN BIKE</a></p>
@@ -88,14 +88,14 @@
 							 <img src="@theme_user('images/s1.jpg')" class="img-responsive " alt=""/>
 						 </div>
 						 <div class="prod1-desc">
-								<h5><a class="product_link" href="{{route('user.bicycles')}}">Road Bike</a></h5>
+								<h5><a class="product_link" href="{{route('user.bicycles.bicycles')}}">Road Bike</a></h5>
 								<p class="product_descr"> Vivamus ante lorem, eleifend nec interdum non, ullamcorper et arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.eleifend nec interdum non, ullamcorper et arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra. </p>									
 						 </div>
 						 <div class="clearfix"></div>
 					 </div>
 					 <div class="product_price">
 							<span class="price-access">$300.51</span>								
-							<a class="button1" href="{{route('user.cart')}}"><span>Add to cart</span></a>
+							<a class="button1" href="{{route('user.cart.cart')}}"><span>Add to cart</span></a>
 					 </div>
 						<div class="clearfix"></div>
 			 </div>
@@ -105,14 +105,14 @@
 							 <img src="@theme_user('images/s2.jpg')" class="img-responsive " alt=""/>
 						 </div>
 						 <div class="prod1-desc">
-								<h5><a class="product_link" href="{{route('user.bicycles')}}">Mountain Bike</a></h5>
+								<h5><a class="product_link" href="{{route('user.bicycles.bicycles')}}">Mountain Bike</a></h5>
 								<p class="product_descr"> Vivamus ante lorem, eleifend nec interdum non, ullamcorper et arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.eleifend nec interdum non, ullamcorper et arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra. </p>									
 						 </div>
 						 <div class="clearfix"></div>
 					 </div>
 					 <div class="product_price">
 							<span class="price-access">$1500.51</span>								
-							<a class="button1" href="{{route('user.cart')}}"><span>Add to cart</span></a>
+							<a class="button1" href="{{route('user.cart.cart')}}"><span>Add to cart</span></a>
 					 </div>
 				  <div class="clearfix"></div>
 			 </div>
@@ -122,14 +122,14 @@
 							 <img src="@theme_user('images/s3.jpg')" class="img-responsive " alt=""/>
 						 </div>
 						 <div class="prod1-desc">
-								<h5><a class="product_link" href="{{route('user.bicycles')}}">Single Speed Bike</a></h5>
+								<h5><a class="product_link" href="{{route('user.bicycles.bicycles')}}">Single Speed Bike</a></h5>
 								<p class="product_descr"> Vivamus ante lorem, eleifend nec interdum non, ullamcorper et arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.eleifend nec interdum non, ullamcorper et arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra. </p>									
 						 </div>
 						 <div class="clearfix"></div>
 					 </div>
 					 <div class="product_price">
 							<span class="price-access">$800.51</span>								
-							<a class="button1" href="{{route('user.cart')}}"><span>Add to cart</span></a>
+							<a class="button1" href="{{route('user.cart.cart')}}"><span>Add to cart</span></a>
 					 </div>
 				 <div class="clearfix"></div>
 			  </div>
