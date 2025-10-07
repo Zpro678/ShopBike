@@ -52,7 +52,22 @@
 									<li><a href="{{route('user.404')}}">TRUCK GRIP</a></li>
 							  </ul>
 						 </li>
-						  <a class="shop" href="{{route('user.cart')}}"><img src="@theme_user('images/cart.png')" alt=""/></a>
+						  {{-- Login/Logout --}}
+						 @if (session()->has('user_id'))  {{-- Đã đăng nhập --}}
+						 <a class="shop" href="{{route('user.cart')}}"><img src="@theme_user('images/cart.png')" alt=""/></a>
+						     <li class="dropdown1">
+						         <a href="#">Xin chào, {{ session('current_user')->HoTen }}!</a>
+						     </li>
+						     <li class="dropdown1">
+						         <a href="{{route('auth.logout')}}">Đăng xuất</a>
+						     </li>
+						 @else  {{-- Chưa đăng nhập --}}
+						     <li class="dropdown1">
+							         <a href="{{route('auth.login')}}">Login</a>
+						     </li>
+							 <a class="shop" href="{{route('user.cart')}}"><img src="@theme_user('images/cart.png')" alt=""/></a>
+						 @endif
+						 {{-- End Login/Logout --}}
 					  </ul>
 				 </div>
 				 <div class="clearfix"></div>

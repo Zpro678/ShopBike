@@ -15,8 +15,13 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        //
+        //Alias
+        $middleware->alias([
+            'validate.user'  => ValidateUserData::class,
+            'check.login' => \App\Http\Middleware\CheckLogin::class
+        ]);
 
+        //Global
         $middleware->append(\App\Http\Middleware\DemoMiddleWare::class); // đăng ký cho toàn bộ route
         /* xử lí auto đăng ký [code khá khó hiểu]
              $middlewarePath = app_path('Http/Middleware');
@@ -85,9 +90,9 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->alias($aliases);
     }
         */
-        $middleware->alias([
-            'validate.user' => ValidateUserData::class,
-        ]);
+        // $middleware->alias([
+        //     'validate.user' => ValidateUserData::class,
+        // ]);
 
 
     })
