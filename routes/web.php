@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
 use Illuminate\Http\Request;
 // Route::get('/', function () {
 //     return view('welcome');
@@ -27,6 +28,14 @@ Route::get('/404', [UserController::class, 'error404'])->name('user.404');
 
 Route::get('404', [UserController::class, 'error4041'])->name('user.404');
 
+
+// admin
+Route::prefix('admin')->group(function () {
+    Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+    Route::get('/users', [AdminController::class, 'users'])->name('admin.users');
+    Route::get('/products', [AdminController::class, 'products'])->name('admin.products');
+    Route::get('/orders', [AdminController::class, 'orders'])->name('admin.orders');
+});
 
 Route::post('/', function (Request $request) {
     $data = $request->only(['title', 'phone', 'email', 'content']);
