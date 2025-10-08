@@ -25,7 +25,7 @@ Route::get('/client/cart', [UserController::class, 'cart'])->name('user.cart.car
 Route::get('/client/single', [UserController::class, 'single'])->name('user.single.single');
 
 // Trang 404 (tùy bạn có muốn route không)
-
+Route::get('/405', [UserController::class, 'error404'])->name('user.404.405');
 Route::get('/client/404', [UserController::class, 'error404'])->name('user.404.404');
 
 // Route::get('/user/404', [UserController::class, 'error4041'])->name('user.404.404');
