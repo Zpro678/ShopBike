@@ -23,7 +23,7 @@ Route::get('/client/bicycles', [UserController::class, 'bicycles'])->name('user.
 Route::get('/client/parts', [UserController::class, 'parts'])->name('user.parts.parts');
 Route::get('/client/accessories', [UserController::class, 'accessories'])->name('user.accessories.accessories');
 Route::get('/client/cart', [UserController::class, 'cart'])->name('user.cart.cart');
-Route::get('/client/single', [UserController::class, 'single'])->name('user.single.single');
+Route::get('/client/single/{id}', [UserController::class, 'single'])->name('user.single.single');
 
 // Trang 404 (tùy bạn có muốn route không)
 
@@ -31,21 +31,24 @@ Route::get('/client/404', [UserController::class, 'error404'])->name('user.404.4
 
 // Route::get('/user/404', [UserController::class, 'error4041'])->name('user.404.404');
 
-
 // admin
-Route::prefix('admin')->group(function () {
-    Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
-    Route::get('/users', [AdminController::class, 'users'])->name('admin.users');
-    Route::get('/products', [AdminController::class, 'products'])->name('admin.products');
-    Route::get('/orders', [AdminController::class, 'orders'])->name('admin.orders');
+Route::prefix('/manager')->name('admin.')->group(function () {
+    Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
+    Route::get('/users', [AdminController::class, 'users'])->name('users');
+    Route::get('/products', [AdminController::class, 'products'])->name('products');
+    Route::get('/orders', [AdminController::class, 'orders'])->name('orders');
 });
 
-Route::post('/', function (Request $request) {
-    $data = $request->only(['title', 'phone', 'email', 'content']);
+// Route::post('/', function (Request $request) {
+//     $data = $request->only(['title', 'phone', 'email', 'content']);
 
-    // truy vấn insert dữ liệu vào bảng user
-    DB::table('user')->insert($data);
+//     // truy vấn insert dữ liệu vào bảng user
+//     DB::table('user')->insert($data);
     
-    return response()->json(['success' => true, 'data' => $data]); // trả JSON về client
-})->middleware('validate.user');
+//     return response()->json(['success' => true, 'data' => $data]); // trả JSON về client
+// })->middleware('validate.user');
 
+// Route::get('/client/parts',function(){
+//     $data=DB::select('Select * from phukien');
+//     return view('user.parts.parts',['data'=>$data]);
+// });

@@ -4,9 +4,12 @@
 <!--/banner-->
 <div class="parts">
 	 <div class="container">
+
 		 <h2>BIKE-PARTS ALL</h2>
 		 <div class="bike-parts-sec">
+			<!-- bike - parts  -->
 		      <div class="bike-parts">
+
 				 <div class="top">
 					 <ul>
 						 <li><a href="{{route('user.index.index')}}">home</a></li>
@@ -14,157 +17,24 @@
 						 <li><a href="#">parts</a></li>
 					 </ul>				 
 				 </div>
+				
 				 <div class="bike-apparels">
-					 <div class="parts1">
-						 <a href="{{route('user.single.single')}}"><div class="part-sec">					 
-							 <img src="@theme_user('images/p1.jpg')" alt=""/>
-							 <div class="part-info">
-								 <a href="#"><h5>Wire Locks<span>$7.00</span></h5></a>
-								 <a class="add-cart" href="{{route('user.single.single')}}">Quick View</a>
-								 <a class="qck" href="{{route('user.single.single')}}">BUY NOW</a>
-							 </div>
-						 </div></a>
-						 <a href="{{route('user.single.single')}}"><div class="part-sec">					 
-							 <img src="@theme_user('images/p3.jpg')" alt=""/>
-							 <div class="part-info">
-								 <a href="#"><h5>Gloves<span>$50.00</span></h5></a>
-								 <a class="add-cart" href="{{route('user.single.single')}}">Quick View</a>
-								 <a class="qck" href="{{route('user.single.single')}}">BUY NOW</a>
-							 </div>
-						 </div></a>
-						 <a href="{{route('user.single.single')}}"><div class="part-sec none1">					 
-							 <img src="@theme_user('images/p2.jpg')" alt=""/>
-							 <div class="part-info">
-								 <a href="#"><h5>Speed Cassette<span>$200.00</span></h5></a>
-								 <a class="add-cart" href="{{route('user.single.single')}}">Quick View</a>
-								 <a class="qck" href="{{route('user.single.single')}}">BUY NOW</a>
-							 </div>
-						 </div></a>
-						 <a href="{{route('user.single.single')}}"><div class="part-sec none1">					 
-							 <img src="@theme_user('images/p4.JPG')" alt=""/>
-							 <div class="part-info">
-								 <a href="#"><h5>Road Bike Pedals<span>$200.00</span></h5></a>
-								 <a class="add-cart" href="{{route('user.single.single')}}">Quick View</a>
-								 <a class="qck" href="{{route('user.single.single')}}">BUY NOW</a>
-							 </div>
-						 </div></a>
-						 <div class="clearfix"></div>
-					 </div>
-					 
-					 <div class="parts2">
-						 <a href="{{route('user.single.single')}}"><div class="part-sec">					 
-							 <img src="@theme_user('images/p5.JPG')" alt=""/>
-							 <div class="part-info">
-								 <a href="#"><h5>Rear Derailleur<span>$200.00</span></h5></a>
-								 <a class="add-cart" href="{{route('user.single.single')}}">Quick View</a>
-								 <a class="qck" href="{{route('user.single.single')}}">BUY NOW</a>
-							 </div>
-						 </div></a>
-						 <a href="{{route('user.single.single')}}"><div class="part-sec">					 
-							 <img src="@theme_user('images/p6.JPG')" alt=""/>
-							 <div class="part-info">
-								 <a href="#"><h5>Race XC Crankset<span>$200.00</span></h5></a>
-								 <a class="add-cart" href="{{route('user.single.single')}}#">Quick View</a>
-								 <a class="qck" href="{{route('user.single.single')}}">BUY NOW</a>
-							 </div>
-						 </div></a>
-						 <a href="{{route('user.single.single')}}"><div class="part-sec none1">					 
-							 <img src="@theme_user('images/p7.JPG')" alt=""/>
-							 <div class="part-info">
-								 <a href="#"><h5>Aero Handlebars<span>$200.00</span></h5></a>
-								 <a class="add-cart" href="{{route('user.single.single')}}">Quick View</a>
-								 <a class="qck" href="{{route('user.single.single')}}">BUY NOW</a>
-							 </div>
-						 </div></a>
-						 <a href="{{route('user.single.single')}}"><div class="part-sec none1">					 
-							 <img src="@theme_user('images/p8.jpg')" alt=""/>
-							 <div class="part-info">
-								 <a href="#"><h5>Grip Tires<span>$200.00</span></h5></a>
-								 <a class="add-cart" href="{{route('user.single.single')}}">Quick View</a>
-								 <a class="qck" href="{{route('user.single.single')}}">BUY NOW</a>
-							 </div>
-						 </div></a>
-						 <div class="clearfix"></div>
-					 </div>
-					 
-					 <div class="parts3">
-						 <a href="{{route('user.single.single')}}"><div class="part-sec">					 
-							 <img src="@theme_user('images/p9.jpg')" alt=""/>
-							 <div class="part-info">
-								 <a href="#"><h5>Bike Wheelset<span>$200.00</span></h5></a>
-								 <a class="add-cart" href="{{route('user.single.single')}}">Quick View</a>
-								 <a class="qck" href="{{route('user.single.single')}}">BUY NOW</a>
-							 </div>
-						 </div></a>
-						 <a href="{{route('user.single.single')}}"><div class="part-sec">					 
-							 <img src="@theme_user('images/p10.jpg')" alt=""/>
-							 <div class="part-info">
-								 <a href="#"><h5>MTB Chainring<span>$200.00</span></h5></a>
-								 <a class="add-cart" href="{{route('user.single.single')}}">Quick View</a>
-								 <a class="qck" href="{{route('user.single.single')}}">BUY NOW</a>
-							 </div>
-						 </div></a>
-						 <a href="{{route('user.single.single')}}"><div class="part-sec none1">					 
-							 <img src="@theme_user('images/p11.jpg')" alt=""/>
-							 <div class="part-info">
-								 <a href="#"><h5>Suspensions<span>$200.00</span></h5></a>
-								 <a class="add-cart" href="{{route('user.single.single')}}">Quick View</a>
-								 <a class="qck" href="{{route('user.single.single')}}">BUY NOW</a>
-							 </div>
-						 </div></a>
-						 <a href="{{route('user.single.single')}}"><div class="part-sec none1">					 
-							 <img src="@theme_user('images/p12.jpg')" alt=""/>
-							 <div class="part-info">
-								 <a href="#"><h5>Helmets<span>$200.00</span></h5></a>
-								 <a class="add-cart" href="{{route('user.single.single')}}">Quick View</a>
-								 <a class="qck" href="{{route('user.single.single')}}">BUY NOW</a>
-							 </div>
-						 </div></a>
-						 <div class="clearfix"></div>
-					 </div>
-					 
-					 <div class="parts4">
-						 <a href="{{route('user.single.single')}}"><div class="part-sec bottom-line">					 
-							 <img src="@theme_user('images/p13.jpg')" alt=""/>
-							 <div class="part-info">
-								 <a href="#"><h5>Middle Frames<span>$200.00</span></h5></a>
-								 <a class="add-cart" href="{{route('user.single.single')}}">Quick View</a>
-								 <a class="qck" href="{{route('user.single.single')}}">BUY NOW</a>
-							 </div>
-						 </div></a>
-						 <a href="{{route('user.single.single')}}"><div class="part-sec bottom-line">					 
-							 <img src="@theme_user('images/p14.jpg')" alt=""/>
-							 <div class="part-info">
-								 <a href="#"><h5>Brooks Saddle<span>$200.00</span></h5></a>
-								 <a class="add-cart" href="{{route('user.single.single')}}">Quick View</a>
-								 <a class="qck" href="{{route('user.single.single')}}">BUY NOW</a>
-							 </div>
-						 </div></a>
-						 <a href="{{route('user.single.single')}}"><div class="part-sec bottom-line none1">					 
-							 <img src="@theme_user('images/p15.jpg')" alt=""/>
-							 <div class="part-info">
-								 <a href="#"><h5>Motocross braces<span>$200.00</span></h5></a>
-								 <a class="add-cart" href="{{route('user.single.single')}}">Quick View</a>
-								 <a class="qck" href="{{route('user.single.single')}}">BUY NOW</a>
-							 </div>
-						 </div></a>
-						 <a href="{{route('user.single.single')}}"><div class="part-sec none1">					 
-							 <img src="@theme_user('images/p16.JPG')" alt=""/>
-							 <div class="part-info">
-								 <a href="#"><h5>Bike Pumps<span>$200.00</span></h5></a>
-								 <a class="add-cart" href="{{route('user.single.single')}}">Quick View</a>
-								 <a class="qck" href="{{route('user.single.single')}}">BUY NOW</a>
-							 </div>
-						 </div></a>
-						 <div class="clearfix"></div>
-					 </div>
+				
+					 @include('user.parts.partials_parts.parts1' ,[ 'data' => $data ])
 					 
 				 </div>
-			 </div>
+			</div>
+    <!-- bike - parts  -->
+
 			 <div class="rsidebar span_1_of_left">
+				<!-- skyform -->
 				 <section  class="sky-form">
+
+				 <!-- product_right -->
 					 <div class="product_right">
+
 						 <h3 class="m_2">Categories</h3>
+
 							<select class="dropdown" tabindex="10" data-settings='{"wrapperClass":"metro"}'>
 								<option value="0">Frames</option>	
 								<option value="1">Back Packs</option>
@@ -172,33 +42,40 @@
 								<option value="3">Panniers </option>
 								<option value="4">Saddle Bags</option>								
 						   </select>
+
 						   <select class="dropdown" tabindex="50" data-settings='{"wrapperClass":"metro"}'>
 								<option value="1">Body Armour</option>
 								<option value="2">Sub Category1</option>
 								<option value="3">Sub Category2</option>
 								<option value="4">Sub Category3</option>
 						   </select>
+
 						   <select class="dropdown" tabindex="8" data-settings='{"wrapperClass":"metro"}'>
 								<option value="1">Tools</option>
 								<option value="2">Sub Category1</option>
 								<option value="3">Sub Category2</option>
 								<option value="4">Sub Category3</option>
 						   </select>
+
 						   <select class="dropdown" tabindex="8" data-settings='{"wrapperClass":"metro"}'>
 								<option value="1">Services</option>
 								<option value="2">Sub Category1</option>
 								<option value="3">Sub Category2</option>
 								<option value="4">Sub Category3</option>
 						   </select>
+
 						   <select class="dropdown" tabindex="8" data-settings='{"wrapperClass":"metro"}'>
 								<option value="1">Materials</option>
 								<option value="2">Sub Category1</option>
 								<option value="3">Sub Category2</option>
 								<option value="4">Sub Category3</option>
 						   </select>
+
 					  </div>
-			 
+			 <!-- product_right -->
+
 					 <h4>components</h4>
+
 					 <div class="row row1 scroll-pane">
 						 <div class="col col-4">
 								<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Frames(20)</label>
@@ -210,7 +87,9 @@
 								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Serevice Parts(12)</label>
 						 </div>
 					 </div>
+
 					 <h4>Apparels</h4>
+
 					 <div class="row row1 scroll-pane">
 						 <div class="col col-4">
 								<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Locks (20)</label>
@@ -222,7 +101,10 @@
 								<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Other (50)</label>
 						 </div>
 					 </div>
+
 				 </section>
+<!-- skyform -->
+ 
 				 <section  class="sky-form">
 						<h4>Brand</h4>
 							<div class="row row1 scroll-pane">
