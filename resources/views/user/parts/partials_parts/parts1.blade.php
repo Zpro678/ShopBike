@@ -8,7 +8,7 @@
         </pre> -->
         <a href="{{ route('user.single.single', ['id' => $item->MaPK]) }}">
             <div class="part-sec {{ ($loop->iteration % 4 == 0) ? 'bottom-line' : '' }}">
-                <img src="@theme_user($item->UrlHinh)" alt="{{ $item->TenPK }}"/>
+                <img src="@theme_user('images/'. $item->UrlHinh)" alt="{{ $item->TenPK }}"/>
                 <div class="part-info">
                     <a href="#"><h5>{{ $item->TenPK }}<span>${{ $item->Gia }}</span></h5></a>
                     <a class="add-cart" href="{{ route('user.single.single', ['id' => $item->MaPK]) }}">Quick View</a>
