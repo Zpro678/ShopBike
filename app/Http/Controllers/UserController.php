@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
 class UserController extends Controller
 {
     
@@ -23,7 +23,26 @@ class UserController extends Controller
     }
 
     public function parts() {
-        return view('user.parts.parts');
+
+        $data = DB::table('phukien_hinhanh')
+    ->join('phukien', 'phukien_hinhanh.MaPK', '=', 'phukien.MaPK')
+    ->select(
+        'phukien_hinhanh.MaHinh',
+        'phukien_hinhanh.MaPK',
+        'phukien.TenPK',
+        'phukien_hinhanh.UrlHinh',
+        'phukien.Gia'
+    )
+    ->get();
+
+    // if ($data->isEmpty()) {
+    //     dd('Không có dữ liệu nào trong bảng phukien_hinhanh!');
+    // } else {
+    //     dd($data); // hiển thị toàn bộ collection
+    // }
+ 
+        return view('user.parts.parts',['data'=> $data]);
+
     }
 
     public function accessories() {
@@ -34,8 +53,11 @@ class UserController extends Controller
         return view('user.cart.cart');
     }
 
-    public function single() {
-        return view('user.single.single');
+
+    public function single($id) {
+        $product = null; //DB::table('sanpham')->where('MaSP', (int)$id)->first();
+        return view('user.single.single',['product'=> $product]);
+
     }
 
     
