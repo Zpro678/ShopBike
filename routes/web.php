@@ -25,7 +25,7 @@ Route::get('/client', [UserController::class, 'index'])->name('user.index.index'
 Route::get('/client/bicycles', [UserController::class, 'bicycles'])->name('user.bicycles.bicycles');
 Route::get('/client/parts', [UserController::class, 'parts'])->name('user.parts.parts');
 Route::get('/client/accessories', [UserController::class, 'accessories'])->name('user.accessories.accessories');
-Route::get('/client/cart', [UserController::class, 'cart'])->name('user.cart.cart');
+Route::get('/client/cart', [UserController::class, 'cart'])->name('user.cart.cart')->middleware('CheckLoginUser');
 Route::get('/client/single/{id}', [UserController::class, 'single'])->name('user.single.single');
 
 
@@ -37,8 +37,16 @@ Route::get('/client/404', [UserController::class, 'error404'])->name('user.404.4
 
 // Route::get('/user/404', [UserController::class, 'error4041'])->name('user.404.404');
 
-// admin
+// Admin
+// Route login - KHÔNG cần middleware
 Route::prefix('/manager')->name('admin.')->group(function () {
+    Route::get('/loginAdmin', [AdminController::class, 'loginAdminIndex'])->name('loginAdmin');
+    Route::post('/loginAdmin', [AdminController::class, 'loginAdmin'])->name('loginAdmin.store');
+});
+
+// Route bảo vệ - Áp dụng middleware cho group này
+Route::prefix('/manager')->name('admin.')->middleware('CheckLoginAdmin')->group(function () {
+    Route::get('/', [AdminController::class, 'dashboard'])->name('dashboard');
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
     Route::get('/users', [AdminController::class, 'users'])->name('users');
     Route::get('/products', [AdminController::class, 'products'])->name('products');
