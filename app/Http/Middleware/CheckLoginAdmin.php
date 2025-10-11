@@ -17,7 +17,7 @@ class CheckLoginAdmin
     {
         if (!$request->session()->has('admin_id')) {
             // Chưa login
-            return redirect('/manager/loginAdmin')->with('error', 'Vui lòng đăng nhập để tiếp tục truy cập trang quản trị');
+            return redirect('/manager/login')->with('error', 'Vui lòng đăng nhập để tiếp tục truy cập trang quản trị');
         }
 
         // Đã login

@@ -21,6 +21,7 @@ class AuthController extends Controller
         ], [
             'email.required' => 'Email không được để trống.',
             'matkhau.required' => 'Mật khẩu không được để trống.',
+            
         ]);
 
         // Lấy input
