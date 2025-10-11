@@ -5,7 +5,7 @@
 <div class="cart">
 	 <div class="container">
 		 <div class="cart-top">
-			<a href="{{route('user.index')}}"><< home</a>
+			<a href="{{route('user.index.index')}}"><< home</a>
 		 </div>	
 			
 		 <div class="col-md-9 cart-items">

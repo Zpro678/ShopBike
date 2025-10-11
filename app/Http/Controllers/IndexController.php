@@ -12,6 +12,8 @@ class IndexController extends Controller
         $ip = $request->ip();
         $agent = $request->header('User-Agent');
 
-        return view('user.index',compact('ip', 'agent'));
+        return view('user.index.index',compact('ip', 'agent'));
     }
+
+    
 }
