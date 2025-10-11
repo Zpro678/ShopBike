@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     // Trang dashboard
+    
     public function dashboard()
     {
         return view('admin.dashboard');

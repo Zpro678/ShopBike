@@ -5,8 +5,6 @@
 <div class="parts">
 	 <div class="container">
 
-
-
 		 <h2>BIKE-PARTS ALL</h2>
 		 <div class="bike-parts-sec">
 			<!-- bike - parts  -->

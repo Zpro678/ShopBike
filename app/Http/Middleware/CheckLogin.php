@@ -24,4 +24,6 @@ class CheckLogin
         // Đã login
         return $next($request);
     }
+
+    
 }
