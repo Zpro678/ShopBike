@@ -12,21 +12,81 @@ class AdminController extends Controller
         return view('admin.dashboard');
     }
 
-    // Trang quản lý user
-    public function users()
+    public function blank()
     {
-        return view('admin.users');
+        return view('admin.blank');
     }
 
-    // Trang quản lý sản phẩm
-    public function products()
+    public function buttons()
     {
-        return view('admin.products');
+        return view('admin.buttons');
     }
 
-    // Trang quản lý đơn hàng
-    public function orders()
+    public function flot()
     {
-        return view('admin.orders');
+        return view('admin.flot');
     }
+
+    public function forms()
+    {
+        return view('admin.forms');
+    }
+
+    public function grid()
+    {
+        return view('admin.grid');
+    }
+
+    public function icons()
+    {
+        return view('admin.icons');
+    }
+
+    public function login()
+    {
+        return view('admin.login');
+    }
+
+    public function morris()
+    {
+        return view('admin.morris');
+    }
+
+    public function notifications()
+    {
+        return view('admin.notifications');
+    }
+
+    public function panels_wells()
+    {
+        return view('admin.panels-wells');
+    }
+
+    public function tables()
+    {
+        return view('admin.tables');
+    }
+
+    public function typography()
+    {
+        return view('admin.typography');
+    }
+
+    // // Trang quản lý user
+    // public function users()
+    // {
+    //     return view('admin.users');
+    // }
+
+    // // Trang quản lý sản phẩm
+    // public function products()
+    // {
+    //     return view('admin.products');
+    // }
+
+    // // Trang quản lý đơn hàng
+    // public function orders()
+    // {
+    //     return view('admin.orders');
+    // }
 }
