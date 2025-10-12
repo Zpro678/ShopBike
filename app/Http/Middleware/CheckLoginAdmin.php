@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class CheckLogin
+class CheckLoginAdmin
 {
     /**
      * Handle an incoming request.
@@ -15,15 +15,12 @@ class CheckLogin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        // Check login
-        if (!$request->session()->has('user_id')) {
+        if (!$request->session()->has('admin_id')) {
             // Chưa login
-            return redirect('/login')->with('error', 'Bạn cần đăng nhập để xem giỏ hàng!');
+            return redirect('/manager/login')->with('error', 'Vui lòng đăng nhập để tiếp tục truy cập trang quản trị');
         }
 
         // Đã login
         return $next($request);
     }
-
-    
 }

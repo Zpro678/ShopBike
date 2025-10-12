@@ -18,13 +18,14 @@ return Application::configure(basePath: dirname(__DIR__))
         //Alias
         $middleware->alias([
             'validate.user'  => ValidateUserData::class,
-            'check.login' => \App\Http\Middleware\CheckLogin::class
+            'CheckLoginUser' => \App\Http\Middleware\CheckLoginUser::class,
+            'CheckLoginAdmin' => \App\Http\Middleware\CheckLoginAdmin::class,
         ]);
 
         //Global
         $middleware->append(\App\Http\Middleware\DemoMiddleWare::class); // đăng ký cho toàn bộ route
         /* xử lí auto đăng ký [code khá khó hiểu]
-             $middlewarePath = app_path('Http/Middleware');
+            $middlewarePath = app_path('Http/Middleware');
 
     if (!is_dir($middlewarePath)) {
         return;

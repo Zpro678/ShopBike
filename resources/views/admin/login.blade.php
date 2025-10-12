@@ -42,13 +42,16 @@
                         <h3 class="panel-title">Please Sign In</h3>
                     </div>
                     <div class="panel-body">
-                        <form role="form">
+                        
+                        
+                        <form role="form" method="POST" action="{{ route('admin.login.store') }}">
+                            @csrf
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
+                                    <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus value="{{ old('email') }}">
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                                    <input class="form-control" placeholder="Password" name="password" type="password" value="{{ old('password') }}">
                                 </div>
                                 <div class="checkbox">
                                     <label>
@@ -56,9 +59,32 @@
                                     </label>
                                 </div>
                                 <!-- Change this to a button or input when using this as a form -->
-                                <a href="index.html" class="btn btn-lg btn-success btn-block">Login</a>
+                                <button type="submit" class="btn btn-lg btn-success btn-block">Login</button>
                             </fieldset>
                         </form>
+
+                        <!-- Thông báo -->
+                        {{-- Hiện success nếu từ redirect --}}
+                        @if (session('success'))
+                            <div style="color: green; margin-top: 25px;">{{ session('success') }}</div>
+                        @endif
+
+                        {{-- Hiện error từ session --}}
+                        @if (session('error'))
+                            <div style="color: red; background: #f8d7da; padding: 10px; border: 1px solid #f5c6cb; border-radius: 5px; margin-bottom: 10px; margin-top: 25px;">
+                                {{ session('error') }}
+                            </div>
+                        @endif
+
+                        {{-- Hiện lỗi nếu có --}}
+                        @if ($errors->any())
+                            <div style="margin-top: 25px;">
+                                @foreach ($errors->all() as $err)
+                                    <p style="color: red;">{{ $err }}</p>
+                                @endforeach
+                            </div>
+                        @endif
+                        <!-- End-Thông báo -->
                     </div>
                 </div>
             </div>
