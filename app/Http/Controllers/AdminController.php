@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\SanPham;
+use App\Models\DanhMuc;
 class AdminController extends Controller
 {
     // Trang dashboard
@@ -33,6 +34,10 @@ class AdminController extends Controller
         return view('admin.forms');
     }
 
+    public function addproducts()
+    {
+        return view('admin.addproducts');
+    }
     public function grid()
     {
         return view('admin.grid');
@@ -72,22 +77,28 @@ class AdminController extends Controller
     {
         return view('admin.typography');
     }
+    //Hiếu
+    // Trả về dữ liệu JSON cho AJAX
+    public function getProducts()
+    {
+        // Lấy dữ liệu từ bảng sanphams
+        $products = SanPham::select('MaSP', 'TenSP','ModelNo' ,'Gia', 'MoTa','SoLuongTon','MaDanhMuc','MaThuongHieu','TrangThai')->get();
+        // if(count($products) == 0)
+        // {
+        //     return view('admin.404');
+        // }
+        // Trả về dạng JSON để JavaScript xử lý
+        return response()->json($products);
+    }
+    //Hiếu
+    // Hiếu
+    public function getDanhMuc(){
+        $DanhMuc =DanhMuc::select('MaDanhMuc', 'TenDanhMuc','LoaiDanhMuc', 'MoTa' )->get();
 
-    // // Trang quản lý user
-    // public function users()
-    // {
-    //     return view('admin.users');
-    // }
+        return response()->json($DanhMuc);
+    }
+    //Hiếu
+   
 
-    // // Trang quản lý sản phẩm
-    // public function products()
-    // {
-    //     return view('admin.products');
-    // }
-
-    // // Trang quản lý đơn hàng
-    // public function orders()
-    // {
-    //     return view('admin.orders');
-    // }
+   
 }

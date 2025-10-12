@@ -95,7 +95,13 @@ return Application::configure(basePath: dirname(__DIR__))
         // ]);
 
 
+
     })
+     
+    ->withProviders([
+        Yajra\DataTables\DataTablesServiceProvider::class,
+    ])
+
     ->withExceptions(function (Exceptions $exceptions): void {
         // 
     })->create();
