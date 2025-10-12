@@ -50,7 +50,7 @@ Route::prefix('/manager')->name('admin.')->group(function () {
 
 //     // truy vấn insert dữ liệu vào bảng user
 //     DB::table('user')->insert($data);
-    
+
 //     return response()->json(['success' => true, 'data' => $data]); // trả JSON về client
 // })->middleware('validate.user');
 
@@ -72,3 +72,7 @@ Route::post('register', [AuthController::class, 'register'])->name('auth.registe
 Route::get('logout', [AuthController::class, 'logout'])->name('auth.logout');
 
 
+// test
+Route::get('/user/single', function () {
+    return 'Route user.single chưa được định nghĩa';
+})->name('user.single');
