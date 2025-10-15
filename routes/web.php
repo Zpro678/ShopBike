@@ -70,8 +70,6 @@ Route::prefix('/manager')->name('admin.')->middleware('CheckLoginAdmin')->group(
 
     Route::get('/icons', [AdminController::class, 'icons'])->name('icons');
 
-    Route::get('/login', [AdminController::class, 'login'])->name('login');
-
     Route::get('/morris', [AdminController::class, 'morris'])->name('morris');
 
     Route::get('/notifications', [AdminController::class, 'notifications'])->name('notifications');
@@ -90,21 +88,6 @@ Route::prefix('/manager')->name('admin.')->middleware('CheckLoginAdmin')->group(
 //ajax
 Route::get('/api/products', [AdminController::class, 'getProducts'])->name('api.products');
 Route::get('/api/categories', [AdminController::class, 'getDanhMuc'])->name('api.categories');
-// Route::post('/', function (Request $request) {
-//     $data = $request->only(['title', 'phone', 'email', 'content']);
-
-//     // truy vấn insert dữ liệu vào bảng user
-//     DB::table('user')->insert($data);
-
-//     return response()->json(['success' => true, 'data' => $data]); // trả JSON về client
-// })->middleware('validate.user');
-
-
-// Route::get('/client/parts',function(){
-//     $data=DB::select('Select * from phukien');
-//     return view('user.parts.parts',['data'=>$data]);
-// });
-
 
 // Trang Đăng nhập và đăng ký
 Route::get('login', [AuthController::class, 'loginIndex'])->name('auth.login');

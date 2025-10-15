@@ -94,8 +94,6 @@ return Application::configure(basePath: dirname(__DIR__))
         //     'validate.user' => ValidateUserData::class,
         // ]);
 
-
-
     })
      
     ->withProviders([
