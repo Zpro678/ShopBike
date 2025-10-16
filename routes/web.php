@@ -15,75 +15,7 @@ use Yajra\DataTables\Facades\DataTables;
 //     return view('welcome');
 // });
 
-Route::get('/', [UserController::class, 'index'])->name('user.index.index');
 
-Route::get('/client', [UserController::class, 'index'])->name('user.index.index');
-
-// Route::get('/user', function () {
-//     return view('user.index');  // đường dẫn tới resources/views/user/index.blade.php
-// })->name('user.index');
-// Các trang khác
-
-Route::get('/client/bicycles', [UserController::class, 'bicycles'])->name('user.bicycles.bicycles');
-Route::get('/client/parts', [UserController::class, 'parts'])->name('user.parts.parts');
-Route::get('/client/accessories', [UserController::class, 'accessories'])->name('user.accessories.accessories');
-Route::get('/client/cart', [UserController::class, 'cart'])->name('user.cart.cart')->middleware('CheckLoginUser');
-Route::get('/client/single/{id}', [UserController::class, 'single'])->name('user.single.single');
-
-
-
-// Trang 404 (tùy bạn có muốn route không)
-
-Route::get('/client/404', [UserController::class, 'error404'])->name('user.404.404');
-
-
-// Route::get('/user/404', [UserController::class, 'error4041'])->name('user.404.404');
-
-// Admin
-// Route login - KHÔNG cần middleware
-Route::prefix('/manager')->name('admin.')->group(function () {
-    Route::get('/login', [AdminController::class, 'loginIndex'])->name('login');
-    Route::post('/login', [AdminController::class, 'login'])->name('login.store');
-    Route::get('/logout', [AdminController::class, 'logout'])->name('logout');
-});
-
-// Route bảo vệ - Áp dụng middleware cho group này
-Route::prefix('/manager')->name('admin.')->middleware('CheckLoginAdmin')->group(function () {
-    Route::get('/', [AdminController::class, 'dashboard'])->name('dashboard');
-    Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
-
-    Route::get('/blank', [AdminController::class, 'blank'])->name('blank');
-
-    Route::get('/buttons', [AdminController::class, 'buttons'])->name('buttons');
-
-    Route::get('/flot', [AdminController::class, 'flot'])->name('flot');
-
-    Route::get('/forms', [AdminController::class, 'forms'])->name('forms');
-
-    Route::get('/addproducts', [AdminController::class, 'addproducts'])->name('addproducts');
-
-    Route::post('/addproducts', [SanPhamController::class, 'store'])->name('addproducts');
-
-    Route::post('/addCategories', [DanhMucController::class, 'AddDanhMuc'])->name('addCategories');
-
-    Route::get('/grid', [AdminController::class, 'grid'])->name('grid');
-
-    Route::get('/icons', [AdminController::class, 'icons'])->name('icons');
-
-    Route::get('/morris', [AdminController::class, 'morris'])->name('morris');
-
-    Route::get('/notifications', [AdminController::class, 'notifications'])->name('notifications');
-
-    Route::get('/panels', [AdminController::class, 'panels_wells'])->name('panels_wells');
-
-    Route::get('/tables', [AdminController::class, 'tables'])->name('tables');
-
-    Route::get('/typography', [AdminController::class, 'typography'])->name('typography');
-
-    // Route::get('/users', [AdminController::class, 'users'])->name('users');
-    // Route::get('/products', [AdminController::class, 'products'])->name('products');
-    // Route::get('/orders', [AdminController::class, 'orders'])->name('orders');
-});
 
 //ajax
 Route::get('/api/products', [AdminController::class, 'getProducts'])->name('api.products');

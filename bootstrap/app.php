@@ -9,7 +9,11 @@ use App\Http\Middleware\DemoMiddleWare;
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
-        web: __DIR__.'/../routes/web.php',
+        web: [
+            __DIR__.'/../routes/web.php',
+            __DIR__.'/../routes/admin.php',
+            __DIR__.'/../routes/user.php',
+        ],
         commands: __DIR__.'/../routes/console.php',
         health: '/up',
     )

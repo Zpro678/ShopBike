@@ -57,10 +57,7 @@
 			</li>
 			@endforeach
 		</ul>
-	</div>
-</div>
-
-
+		
 <script type="text/javascript">
 	$(window).on('load', function() {
 		var cfg = {
@@ -93,3 +90,6 @@
 </script>
 
 <script type="text/javascript" src="@theme_user('js/jquery.flexisel.js')"></script>
+	</div>
+</div>
+

@@ -3,7 +3,7 @@
     <div class="container">
         <h3>CATEGORIES</h3>
         <div class="categorie-grids">
-            <a href="{{route('user.bicycles.bicycles')}}">
+            <a  href="{{route('user.bicycles.bicycles')}}">
                 <div class="col-md-4 cate-grid grid1">
                     <h4>FIXED / SINGLE SPEED</h4>
                     <p>Are you ready for the 27.5 Revloution ?</p>
