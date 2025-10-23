@@ -9,6 +9,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <head>
 <title>@yield('title')</title>
 <link href="@theme_user('css/bootstrap.css')" rel='stylesheet' type='text/css' />
+<!-- <link href="{{ asset('vendor/bootstrap-5.0.2-dist/css/bootstrap.min.css') }}" rel="stylesheet"> -->
+
+
 <!-- jQuery (Bootstrap's JavaScript plugins) -->
 <script src="@theme_user('js/jquery.min.js')"></script>
 <!-- Custom Theme files -->
@@ -26,6 +29,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="@theme_user('js/jquery.easydropdown.js')"></script>
 <link href="@theme_user('css/nav.css')" rel="stylesheet" type="text/css" media="all"/>
 <script src="@theme_user('js/scripts.js')" type="text/javascript"></script>
+
 <!--js-->
 <!---- start-smoth-scrolling---->
 		<script type="text/javascript" src="@theme_user('js/move-top.js')"></script>
@@ -60,6 +64,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!---->
 			@include('layouts.auth.footer')
 <!---->
+<!-- <script src="{{ asset('vendor/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js') }}"></script> -->
 </body>
 </html>
 

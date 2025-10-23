@@ -10,6 +10,6 @@
       });
     });
   </script>
-<div style="margin-top: 40px;" class="container">
-    <a class="morebtn" href="{{ route('user.index.index') }}">Home</a>
-</div>
+ <div style="margin-top: 40px; " class="container">
+        <a class="morebtn" href="{{ route('user.index.index') }}">Home</a>
+    </div>
