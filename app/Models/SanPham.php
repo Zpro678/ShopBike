@@ -18,4 +18,8 @@ class SanPham extends Model
     protected $fillable = [ 'MaSP','TenSP', 'ModelNo', 'Gia', 'MoTa',
         'SoLuongTon', 'MaDanhMuc', 'MaThuongHieu', 'TrangThai', ];
 
+    protected function getSanPham()
+    {
+        return SanPham::select('MaSP', 'TenSP','ModelNo' ,'Gia', 'MoTa','SoLuongTon','MaDanhMuc','MaThuongHieu','TrangThai')->get();
+    }
 }

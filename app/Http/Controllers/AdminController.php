@@ -130,7 +130,7 @@ class AdminController extends Controller
     public function getProducts()
     {
         // Lấy dữ liệu từ bảng sanphams
-        $products = SanPham::select('MaSP', 'TenSP','ModelNo' ,'Gia', 'MoTa','SoLuongTon','MaDanhMuc','MaThuongHieu','TrangThai')->get();
+        $products = SanPham::getSanPham();
         // if(count($products) == 0)
         // {
         //     return view('admin.404');

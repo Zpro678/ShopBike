@@ -32,6 +32,7 @@ class SanPhamController extends Controller
             'MaThuongHieu' => 2, // tạm thời cố định
             'TrangThai' => $request->trangthai,
         ]);
+      
 
         if($request->hasFile('hinhanh')) {
             $file = $request->file('hinhanh');
