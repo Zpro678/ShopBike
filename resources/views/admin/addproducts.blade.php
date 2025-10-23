@@ -17,101 +17,98 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-8">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Nhập thông tin sản phẩm
-                        </div>
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    {{-- Form thêm sản phẩm --}}
-                                    <form role="form" method="POST" enctype="multipart/form-data">
-                                        @csrf
+            <div class="col-lg-8">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Nhập thông tin sản phẩm
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        {{-- Form thêm sản phẩm --}}
+                        <form role="form" method="POST" enctype="multipart/form-data">
+                            @csrf
 
-                                        {{-- Tên sản phẩm --}}
-                                        <div class="form-group">
-                                            <label>Tên sản phẩm</label>
-                                            <input type="text" name="tensp" class="form-control"
-                                                placeholder="Nhập tên sản phẩm" required>
-                                        </div>
-
-                                        {{-- Giá --}}
-                                        <div class="form-group input-group">
-                                            <span class="input-group-addon"><i class="fa fa-dollar"></i></span>
-                                            <input type="number" name="gia" class="form-control" min="0"
-                                                placeholder="Nhập giá sản phẩm" required>
-                                        </div>
-
-                                        {{-- Số lượng --}}
-                                        <div class="form-group input-group">
-                                            <span class="input-group-addon"><i class="fa fa-cubes"></i></span>
-                                            <input type="number" name="soluong" class="form-control" min="0"
-                                                placeholder="Nhập số lượng" required>
-                                        </div>
-
-                                        {{-- Mô tả --}}
-                                        <div class="form-group">
-                                            <label>Mô tả</label>
-                                            <textarea name="mota" class="form-control" rows="3"
-                                                placeholder="Mô tả sản phẩm..."></textarea>
-                                        </div>
-
-                                        {{-- Danh mục --}}
-                                        <div class="form-group">
-                                            <label>Danh mục</label>
-                                            <select name="danhmuc_id" id="danhmucSelect" class="form-control select2"
-                                                required>
-                                                <option value="">-- Chọn danh mục --</option>
-
-                                            </select>
-                                            <span class="input-group-btn">
-                                                <button type="button" id="openCategoryModalBtn"
-                                                    class="btn btn-success mb-3">
-                                                    Thêm danh mục mới
-                                                </button>
-                                            </span>
-                                        </div>
-
-                                        {{-- Hình ảnh --}}
-                                        <div class="form-group">
-                                            <label>Hình ảnh sản phẩm</label>
-                                            <input type="file" name="hinhanh" class="form-control" accept="image/*">
-                                        </div>
-
-                                        {{-- Sản phẩm hot --}}
-                                        <!-- <div class="form-group">
-                                    <label>Đánh dấu sản phẩm hot</label><br>
-                                    <label class="radio-inline">
-                                        <input type="radio" name="is_hot" value="1"> Có
-                                    </label>
-                                    <label class="radio-inline">
-                                        <input type="radio" name="is_hot" value="0" checked> Không
-                                    </label>
-                                </div> -->
-
-                                        {{-- Trạng thái --}}
-                                        <div class="form-group">
-                                            <label>Trạng thái</label><br>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="trangthai" value="1" checked> Hiển thị
-                                            </label>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="trangthai" value="0"> Ẩn
-                                            </label>
-                                        </div>
-
-                                        <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Thêm
-                                            sản phẩm</button>
-                                        <button type="reset" class="btn btn-default"><i class="fa fa-refresh"></i> Làm
-                                            mới</button>
-                                    </form>
-                                </div>
+                            {{-- Tên sản phẩm --}}
+                            <div class="form-group">
+                                <label>Tên sản phẩm</label>
+                                <input type="text" name="tensp" class="form-control"
+                                    placeholder="Nhập tên sản phẩm" required
+                                    oninvalid="this.setCustomValidity('Vui lòng nhập tên sản phẩm')"
+                                    oninput="this.setCustomValidity('')">
                             </div>
-                        </div>
+
+                            {{-- Giá --}}
+                            <div class="form-group input-group">
+                                <span class="input-group-addon"><i class="fa fa-dollar"></i></span>
+                                <input type="number" name="gia" class="form-control" min="0"
+                                    placeholder="Nhập giá sản phẩm" required
+                                    oninvalid="this.setCustomValidity('Vui lòng nhập giá sản phẩm')"
+                                    oninput="this.setCustomValidity('')">
+                            </div>
+
+                            {{-- Số lượng --}}
+                            <div class="form-group input-group">
+                                <span class="input-group-addon"><i class="fa fa-cubes"></i></span>
+                                <input type="number" name="soluong" class="form-control" min="0"
+                                    placeholder="Nhập số lượng" required
+                                    oninvalid="this.setCustomValidity('Vui lòng nhập số lượng')"
+                                    oninput="this.setCustomValidity('')">
+                            </div>
+
+                            {{-- Mô tả --}}
+                            <div class="form-group">
+                                <label>Mô tả</label>
+                                <textarea name="mota" class="form-control" rows="3"
+                                    placeholder="Mô tả sản phẩm..." required
+                                    oninvalid="this.setCustomValidity('Vui lòng nhập mô tả sản phẩm')"
+                                    oninput="this.setCustomValidity('')"></textarea>
+                            </div>
+
+                            {{-- Danh mục --}}
+                            <div class="form-group">
+                                <label>Danh mục</label>
+                                <select name="danhmuc_id" id="danhmucSelect" class="form-control select2" required
+                                    oninvalid="this.setCustomValidity('Vui lòng chọn danh mục')"
+                                    oninput="this.setCustomValidity('')">
+                                    <option value="">-- Chọn danh mục --</option>
+                                </select>
+                                <span class="input-group-btn">
+                                    <button type="button" id="openCategoryModalBtn"
+                                        class="btn btn-success mb-3">
+                                        Thêm danh mục mới
+                                    </button>
+                                </span>
+                            </div>
+
+                            {{-- Hình ảnh --}}
+                            <div class="form-group">
+                                <label>Hình ảnh sản phẩm</label>
+                                <input type="file" name="hinhanh" class="form-control" accept="image/*" required
+                                    oninvalid="this.setCustomValidity('Vui lòng chọn hình ảnh sản phẩm')"
+                                    oninput="this.setCustomValidity('')">
+                            </div>
+
+                            {{-- Trạng thái --}}
+                            <div class="form-group">
+                                <label>Trạng thái</label><br>
+                                <label class="radio-inline">
+                                    <input type="radio" name="trangthai" value="1" checked> Hiển thị
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="trangthai" value="0"> Ẩn
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Thêm sản phẩm</button>
+                            <button type="reset" class="btn btn-default"><i class="fa fa-refresh"></i> Làm mới</button>
+                        </form>
                     </div>
-                    @include('admin.addCategories');
                 </div>
+            </div>
+        </div>
+        @include('admin.addCategories');
+    </div>
 
                 {{-- Cột phụ (ví dụ preview hình ảnh hoặc thông tin khác) --}}
                 <div class="col-lg-4">
