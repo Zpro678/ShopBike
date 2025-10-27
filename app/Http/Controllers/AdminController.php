@@ -33,7 +33,6 @@ class AdminController extends Controller
             'email.required' => 'Email không được để trống.',
             'password.required' => 'Mật khẩu không được để trống.',
         ]);
-
         // Lấy input
         $email = $request->input('email');
         $password = $request->input('password');

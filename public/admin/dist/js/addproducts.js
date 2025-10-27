@@ -9,7 +9,7 @@ $(document).ready(function(){
                 var $select = $('#danhmucSelect');
                 $select.find('option:not(:first)').remove();
            $.each(dataDanhMuc,function(index,dm){
-                if(dm.LoaiDanhMuc == "Xe")
+                if(dm.LoaiDanhMuc == "Xe")  
                 {
                     var $option = $('<option>',{
                         value: dm.MaDanhMuc,

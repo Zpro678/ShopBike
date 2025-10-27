@@ -14,7 +14,6 @@ class SanPham extends Model
     protected $table = 'sanpham';
     public $timestamps = false;
     protected $primaryKey = 'MaSP';
-
     protected $fillable = [ 'MaSP','TenSP', 'ModelNo', 'Gia', 'MoTa',
         'SoLuongTon', 'MaDanhMuc', 'MaThuongHieu', 'TrangThai', ];
 

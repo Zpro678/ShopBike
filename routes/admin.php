@@ -15,13 +15,17 @@ use App\Http\Controllers\AuthController;
 // Admin
 // Route login - KHÔNG cần middleware
 Route::prefix('/manager')->name('admin.')->group(function () {
+
     Route::get('/login', [AdminController::class, 'loginIndex'])->name('login');
+
     Route::post('/login', [AdminController::class, 'login'])->name('login.store');
+    
     Route::get('/logout', [AdminController::class, 'logout'])->name('logout');
 });
 
 Route::prefix('/manager')->name('admin.')->middleware('CheckLoginAdmin')->group(function () {
     Route::get('/', [AdminController::class, 'dashboard'])->name('dashboard');
+
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
 
     Route::get('/blank', [AdminController::class, 'blank'])->name('blank');

@@ -13,7 +13,7 @@ class DanhMucController extends Controller
     {
 
         // dd($request->all()); // in toàn bộ dữ liệu gửi lên form
-
+        
         $request->validate([
             'ten_danh_muc' => 'required|string|max:100',
             'loai_danh_muc' => 'required|string|max:20',

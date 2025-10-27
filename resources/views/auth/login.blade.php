@@ -28,8 +28,10 @@
         
         <form method="POST" action="{{ route('auth.login.store') }}">
             @csrf
-            <input class="user" type="text" name="email" placeholder="Email" value="{{ old('email') }}"><br>
-            <input name="matkhau" type="password" placeholder="Password" style="
+            <input class="user" type="text" id="email" name="email" placeholder="Email" value="{{ old('email') }}"
+            required oninvalid="this.setCustomValidity('Email không được để trống')" 
+            oninput="this.setCustomValidity('')"><br>
+            <input class="password" name="matkhau" type="password" placeholder="Password" style="
                 width: 90%; /* Chọn 90% vì nó ở cuối, nếu muốn 43% thì thay đổi */
                 margin-right: 4%;
                 padding: 10px;
@@ -48,11 +50,22 @@
                 -o-transition: 0.5s all ease;
                 -ms-transition: 0.5s all ease;
                 /* resize: none; - Bỏ vì input password không hỗ trợ resize, chỉ dùng cho textarea */
-            " value="{{ old('matkhau') }}"><br>
+            " value="{{ old('matkhau') }}"
+            required oninvalid="this.setCustomValidity('Password không được để trống')"
+            oninput="this.setCustomValidity('')"
+            ><br>
             <input type="submit" value="Login"><br>
             <a class="morebtn" href="{{ route('auth.register') }}">Create account</a>
         </form>
         
     </div>
 </div>
+
+<!-- <script>
+    
+    InputEmail = document.getElementsByClassName('email');
+    InputPassword =
+
+
+</script> -->
 @endsection
