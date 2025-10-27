@@ -6,13 +6,14 @@ use Illuminate\Http\Request;
 
 use App\Models\SanPham;
 use App\Models\DanhMuc;
+use App\Models\NhanVien;
 
-use Illuminate\Support\Facades\DB;
+// use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
     // Trang dashboard
-    
+
     public function dashboard()
     {
         return view('admin.dashboard');
@@ -33,25 +34,23 @@ class AdminController extends Controller
             'email.required' => 'Email không được để trống.',
             'password.required' => 'Mật khẩu không được để trống.',
         ]);
-
         // Lấy input
         $email = $request->input('email');
         $password = $request->input('password');
 
-        $admin = DB::table('nhanvien')
-            ->where('Email', $email)
-            ->first();
+        // PHieu
+        $admin = NhanVien::getByEmail($email);
 
         if ($admin && $password === $admin->MatKhau) {
             $request->session()->put('current_admin', $admin);
             $request->session()->put('admin_id', $admin->MaNV);
-            
+
             // dd($request->session()->all());
-            
+
             // return redirect('/')->with('success', 'Đăng nhập OK!');
             return redirect('/manager');
         }
-        
+
         // KHÔNG phải là lỗi validation, mà là một thông báo lỗi chung
         // return back()->with('error', 'Hệ thống đang bảo trì, vui lòng thử lại sau.')->withInput();
 
@@ -127,10 +126,10 @@ class AdminController extends Controller
     }
     //Hiếu
     // Trả về dữ liệu JSON cho AJAX
+    // PHieu da sua
     public function getProducts()
     {
-        // Lấy dữ liệu từ bảng sanphams
-        $products = SanPham::select('MaSP', 'TenSP','ModelNo' ,'Gia', 'MoTa','SoLuongTon','MaDanhMuc','MaThuongHieu','TrangThai')->get();
+        $products = SanPham::getAll();
         // if(count($products) == 0)
         // {
         //     return view('admin.404');
@@ -139,14 +138,10 @@ class AdminController extends Controller
         return response()->json($products);
     }
     //Hiếu
-    // Hiếu
-    public function getDanhMuc(){
-        $DanhMuc =DanhMuc::select('MaDanhMuc', 'TenDanhMuc','LoaiDanhMuc', 'MoTa' )->get();
-
+    // PHieu
+    public function getDanhMuc()
+    {
+        $DanhMuc = DanhMuc::getAll();
         return response()->json($DanhMuc);
     }
-    //Hiếu
-   
-
-
 }

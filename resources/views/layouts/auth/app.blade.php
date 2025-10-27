@@ -9,6 +9,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <head>
 <title>@yield('title')</title>
 <link href="@theme_user('css/bootstrap.css')" rel='stylesheet' type='text/css' />
+<!-- <link href="{{ asset('vendor/bootstrap-5.0.2-dist/css/bootstrap.min.css') }}" rel="stylesheet"> -->
+
+
 <!-- jQuery (Bootstrap's JavaScript plugins) -->
 <script src="@theme_user('js/jquery.min.js')"></script>
 <!-- Custom Theme files -->
@@ -18,6 +21,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Bike-shop Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+
+<!-- Token -->
+<meta name="csrf-token" content="{{ csrf_token() }}">
+<!-- EndToken -->
+
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--webfont-->
 <link href='http://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400' rel='stylesheet' type='text/css'>
@@ -26,6 +34,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="@theme_user('js/jquery.easydropdown.js')"></script>
 <link href="@theme_user('css/nav.css')" rel="stylesheet" type="text/css" media="all"/>
 <script src="@theme_user('js/scripts.js')" type="text/javascript"></script>
+
 <!--js-->
 <!---- start-smoth-scrolling---->
 		<script type="text/javascript" src="@theme_user('js/move-top.js')"></script>
@@ -60,6 +69,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!---->
 			@include('layouts.auth.footer')
 <!---->
+<!-- <script src="{{ asset('vendor/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js') }}"></script> -->
 </body>
 </html>
 
