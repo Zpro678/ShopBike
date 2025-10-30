@@ -37,7 +37,7 @@ class KhachHang extends Model
             'DiaChi' => $data['diachi'],
             'MatKhau' => $data['matkhau'],
             'NgayTao' => now(),
-            'TrangThai' => 1,
+            'TrangThai' => 1,   
         ]);
         return $khachHang;
     }
