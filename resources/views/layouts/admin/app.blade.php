@@ -79,8 +79,8 @@
    
     
     <!-- Bootstrap Core JavaScript -->
-    <!-- <script src="@theme_admin('bower_components/bootstrap/dist/js/bootstrap.min.js')"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="@theme_admin('bower_components/bootstrap/dist/js/bootstrap.min.js')"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
 
     <!-- <script src="@theme_admin('bower_components/bootstrap/dist/js/bootstrap.bundle.min.js')"></script> -->
 

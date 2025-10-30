@@ -11,6 +11,7 @@
 						</label>
 						<input id="mobile_menu" type="checkbox">
 					   <ul class="nav">
+					  
 						  <li class="dropdown1"><a class="scroll" href="{{route('user.bicycles.bicycles')}}">BICYCLES</a>
 							  <ul class="dropdown2">
 									<li><a href="{{route('user.bicycles.bicycles')}}">FIXED / SINGLE SPEED</a></li>
@@ -45,11 +46,15 @@
 						  
 
 						  {{-- Login/Logout --}}
-						 @if (session()->has('user_id'))  {{-- Đã đăng nhập --}}
+						  @if (session()->has('user_id'))
+						  {{-- Đã đăng nhập --}}
+						  
 						 <a class="shop" href="{{route('user.cart.cart')}}"><img src="@theme_user('images/cart.png')" alt=""/></a>
 						     <li class="dropdown1">
 						         <a href="#">Xin chào, {{ session('current_user')->HoTen }}!</a>
 						     </li>
+							
+							
 						     <li class="dropdown1">
 						         <a href="{{route('auth.logout')}}">Đăng xuất</a>
 						     </li>
@@ -57,7 +62,7 @@
 						     <li class="dropdown1">
 							         <a href="{{route('auth.login')}}">Login</a>
 						     </li>
-							 <a class="shop" href="{{route('user.cart.cart')}}"><img src="@theme_user('images/cart.png')" alt=""/></a>
+							 <li><a class="shop" href="{{route('user.cart.cart')}}"><img src="@theme_user('images/cart.png')" alt=""/></a></li>
 						 @endif
 						 {{-- End Login/Logout --}}
 

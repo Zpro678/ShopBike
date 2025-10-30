@@ -32,7 +32,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- <script src="@theme_user('js/scripts.js')" type="text/javascript"></script> -->
 	<!--js-->
 	<!---- start-smoth-scrolling---->
-<script type="text/javascript" src="@theme_user('js/move-top.js')"></script>
+	<script type="text/javascript" src="@theme_user('js/move-top.js')"></script>
 	<script type="text/javascript" src="@theme_user('js/easing.js')"></script>
 	<script type="text/javascript">
 			jQuery(document).ready(function($) {
@@ -45,7 +45,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 		</script>
 	<!---- start-smoth-scrolling---->
-
+		
 
 </head>
 
@@ -69,7 +69,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	
 	@include('layouts.user.footer')
 
-
+	
 </body>
 
 </html>
