@@ -41,6 +41,7 @@ class AdminController extends Controller
         // PHieu
         $admin = NhanVien::getByEmail($email);
 
+        // mkhau ở db chưa hash nên chưa gắn hash::check
         if ($admin && $password === $admin->MatKhau) {
             $request->session()->put('current_admin', $admin);
             $request->session()->put('admin_id', $admin->MaNV);

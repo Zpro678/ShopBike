@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use App\Models\KhachHang;
 
 class AuthController extends Controller
@@ -29,13 +30,10 @@ class AuthController extends Controller
         $email = $request->input('email');
         $matkhau = $request->input('matkhau');
 
-        // $user = DB::table('khachhang')
-        //     ->where('Email', $email)
-        //     ->first();
-
+        // tìm tk kh bằng email --> check pass
         $user = KhachHang::getByEmail($email);
 
-        if ($user && $matkhau === $user->MatKhau) {
+        if ($user && Hash::check($matkhau, $user->MatKhau)) {
             $request->session()->put('current_user', $user);
             $request->session()->put('user_id', $user->MaKH);
 
